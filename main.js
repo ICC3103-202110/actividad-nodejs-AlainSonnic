@@ -1,29 +1,21 @@
-var a = [
-    'Hidrógeno',
-    'Helio',
-    'Litio',
-    'Berilio'
-  ];
-  
+/* fibonachi f(n) = f(n-1) + f(n-2)*/
 
-/*function tercero(a) {
-    for(var i=0; i<3 ; i++){
-        console.log(a[i]);
-    }
-    }
+ 
 
-console.log(tercero(a));
-*/
-
-function fac(n) {
+function fibo(n) {
     if (n==1){
+        return n;        
+    }
+    else if (n==0){
         return n;
     }
-    else {
-        var r=n*fac(n-1);
+    else{
+        var t= fibo(n-1) + fibo(n-2);
     }
-    return r;
+    return t;
+
 }
 
-console.log (fac(5));
+
+console.log(fibo(5))
 
