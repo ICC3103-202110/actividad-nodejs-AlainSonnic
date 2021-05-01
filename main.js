@@ -16,6 +16,16 @@ function fibo(n) {
 
 }
 
+/* Pedir un numero*/
+const terminal = require('readline');             
 
-console.log(fibo(5))
+const Console = terminal.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
+Console.question("Elija un numero:", (number_fibo) => {
+    
+    console.log("F( "+ (number_fibo)+" ) = " + fibo(number_fibo))
+    Console.close();
+    });
